@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">A.Website</span>
+                <button onclick=toggleSidebar() id="toggle-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg></button>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z"/></svg>
+                <span>Home</span>
+                </a>
+                
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M600-160v-280h280v280H600ZM440-520v-280h440v280H440ZM80-160v-280h440v280H80Zm0-360v-280h280v280H80Zm440-80h280v-120H520v120ZM160-240h280v-120H160v120Zm520 0h120v-120H680v120ZM160-600h120v-120H160v120Zm360 0Zm-80 240Zm240 0ZM280-600Z"/></svg>
+                <span>Dashboard</span>
+                </a>
+                
+            </li>
+            <li>
+                <button onClick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
+                    <span>Folders</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="error.html">Folder</a></li>
+                        <li><a href="error.html">Document</a></li>
+                        <li><a href="error.html">Project</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onClick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M80-160v-160h160v160H80Zm240 0v-160h560v160H320ZM80-400v-160h160v160H80Zm240 0v-160h560v160H320ZM80-640v-160h160v160H80Zm240 0v-160h560v160H320Z"/></svg>
+                    <span>To-Do Lists</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="error.html">Work</a></li>
+                        <li><a href="error.html">Private</a></li>
+                        <li><a href="error.html">Coding</a></li>
+                        <li><a href="error.html">Gardening</a></li>
+                        <li><a href="error.html">School</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li  class="active">
+                <a href="calender.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                    <span>Calender</span></a>
+                
+            </li>
+            <li>
+                <a href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                    <span>Profile</span></a>
+                
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Calender</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quia cumque animi necessitatibus asperiores sint itaque reprehenderit ipsam neque, quisquam facilis a quas veniam rerum assumenda! Dolorem laudantium adipisci ex!</p>
+        </div>
+        <div class="container">
+            <h2>Example Heading</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem nam commodi optio iusto dolor necessitatibus dolorum consectetur aliquam! Consequuntur modi rerum aspernatur, corporis minima minus ipsa obcaecati fuga alias at sapiente rem sint libero aperiam temporibus? Cupiditate minus atque quidem cumque dolor autem amet sit fuga earum pariatur ea, minima laboriosam, nam modi. Inventore ipsum quasi tenetur eos vitae suscipit harum quisquam vero dolorem? Obcaecati perferendis sunt est possimus neque veniam odit eaque cumque, corrupti corporis eos voluptates fugit quisquam!</p>
+        </div>
+        <div class="container">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil facere, ipsam, minima laboriosam distinctio animi nesciunt, provident quos laborum illo! Voluptas quae dolorum nemo porro sequi tempore animi, nesciunt, sapiente dolorem consequatur sit alias quod quia. Recusandae blanditiis exercitationem nobis dignissimos laboriosam, voluptate, asperiores eum earum quo ipsam itaque velit labore perferendis quasi eaque nostrum numquam? Ipsam mollitia obcaecati atque iusto eligendi quo optio, dolore aperiam eos labore consequuntur officia hic nesciunt tempore dolorum delectus perferendis laboriosam fugit assumenda!</p>
+        </div>
+        </main>
+</body>
+</html>
